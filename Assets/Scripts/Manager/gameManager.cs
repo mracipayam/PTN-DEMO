@@ -10,6 +10,8 @@ public class gameManager : MonoBehaviour
     public bool CanBoyMove;
     public bool CanOpponentMove;
 
+    public bool CanPaint;
+
     public bool isFinish;
 
     public GameObject StartingPanel;
@@ -26,6 +28,8 @@ public class gameManager : MonoBehaviour
         }else{
             Destroy(gameObject);
         }
+
+        Screen.SetResolution(1080, 1920, true);
     }
 
     private void Start() {
@@ -51,13 +55,19 @@ public class gameManager : MonoBehaviour
         if(isFinish){
             InGamePanel.SetActive(false);
             //Open the endgame panel
-            EndGamePanel.SetActive(true);
+            //EndGamePanel.SetActive(true);
+            CanPaint = true;
             CanBoyMove = false;
             CanOpponentMove = false;
             BoyAnim.SetBool("run",false);
             SetFalseOpponentAnimation();
             
         }
+    }
+
+    public void OpenEndGameScene(){
+        EndGamePanel.SetActive(true);
+        CanPaint = false;
     }
 
 

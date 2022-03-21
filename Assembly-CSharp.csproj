@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\Obstacles\RotatorMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovementController.cs" />
      <Compile Include="Assets\Scripts\Manager\RankManager.cs" />
+     <Compile Include="Assets\Scripts\Painting\Paintable.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
